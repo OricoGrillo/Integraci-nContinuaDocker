@@ -42,7 +42,7 @@ app.use(Express.json());
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+    res.setHeader('Access-Control-Allow-Origin', '*');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -115,8 +115,6 @@ app.post('/login', (req: Request, res: Response) => {
 app.get('/products', async (req: Request, res: Response) => {
     
     const productos = await mongodb.db.collection('cars').find({}).toArray();
-
-    console.log("Holas");
 
     // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200/');
     // res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // If needed

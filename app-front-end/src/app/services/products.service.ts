@@ -8,7 +8,7 @@ import { ObserveOnOperator } from 'rxjs/internal/operators/observeOn';
 
 //const URL_PRODUCTS = 'assets/data/productos.json';
 const URL_PRODUCTS = 'https://angular-products-grillo.firebaseio.com/productos.json';
-const URL_PRODUCTS2 = 'http://192.168.116.128/products/';
+const URL_PRODUCTS2 = 'http://api.midominio.com/products/';
 const PAIS = 'https://restcountries.eu/rest/v2/all';
 
 @Injectable({
